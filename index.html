@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shruti Kumari | Interactive Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #eaeef1;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #4a90e2;
+      position: relative;
+      animation: slideIn 0.5s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #50e3c2;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      animation: popIn 0.5s ease-in-out;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #4a90e2;
+      font-size: 1.8rem;
+    }
+
+    .card p {
+      margin: 0.5rem 0 1rem;
+      font-size: 1rem;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #4a90e2;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .card a:hover {
+      background: #005f9e;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background: #4a90e2;
+      color: white;
+      padding: 2rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shruti Kumari</h1>
+    <p>2nd Year B.Tech CSE | Passionate about AI, Java & Automation</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a CSE student at Dumka Engineering College with a diploma in Computer Science from Government Women's Polytechnic, Jamshedpur (2024). I completed Core Java training at ECL and am currently interning at Lawazia Tech on AI-based agent workflows using n8n.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Languages</h3><p>Core Java, C/C++, HTML/CSS</p></div>
+      <div class="card"><h3>Tools</h3><p>Git, GitHub, VS Code, MySQL</p></div>
+      <div class="card"><h3>Automation</h3><p>n8n, AI Agents Workflows</p></div>
+      <div class="card"><h3>Soft Skills</h3><p>Problem Solving, Teamwork, Adaptability</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Employee Management System</h3>
+        <p>Java + MySQL based desktop app for managing employee records.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>n8n Telegram Bot</h3>
+        <p>Bot to auto-verify and fix HTML using AI + n8n workflows via Telegram.</p>
+        <a href="#">View Workflow</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cybersecurity Bootcamp</h3>
+        <p>Completed with Deloit & SkillEcted in 2025</p>
+        <a href="#">View Certificate</a>
+      </div>
+      <div class="card">
+        <h3>Java Training at ECL</h3>
+        <p>Core Java industrial training at Eastern Coalfields Ltd</p>
+        <a href="#">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="grid">
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:shrutikumari9878@example.com">shrutikumari9878@example.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shruti-kumari-596652273" target="_blank">linkedin.com/in/shruti-kumari-596652273</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/sgsingh2003" target="_blank">https://github.com/sgsingh2003</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Shruti Kumari —  Portfolio</p>
+  </footer>
+
+</body>
+</html>
